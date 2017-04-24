@@ -5,7 +5,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.2'
+        classpath 'com.android.tools.build:gradle:2.2.3'
         classpath('com.tencent.tinker:tinker-patch-gradle-plugin:1.7.7')
     }
 }
@@ -125,7 +125,7 @@ ext {
     tinkerOldApkPath = "${bakPath}/${getBaseApkPrefix()}.apk"
 
     //proguard mapping file to build patch apk
-    tinkerApplyMappingPath = "${bakPath}/app-debug-1024-14-33-32-mapping.txt"
+    tinkerApplyMappingPath = "${bakPath}/sample-release-0424-23-43-42-mapping.txt"
     //resource R.txt to build patch apk, must input if there is resource changed
     tinkerApplyResourcePath = "${bakPath}/${getBaseApkPrefix()}-R.txt"
 }
@@ -156,7 +156,7 @@ def getTinkerBuildFlavorDirectory() {
 }
 
 def getBaseApkPrefix() {
-    return hasProperty("BASE_APK_PREFIX") ? BASE_APK_PREFIX : "sample-debug-0215-17-48-55"
+    return hasProperty("BASE_APK_PREFIX") ? BASE_APK_PREFIX : "sample-release-0424-23-43-42"
 }
 
 if (buildWithTinker()) {
