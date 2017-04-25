@@ -14,4 +14,9 @@
 
 1. 注册问题，注册不成功(如果是直接使用的编译好的war包的话，需要再放入tomcat运行后，修改配置文件的值)
 2. 上传补丁，也得注意下
-2. 下载问题，本地路径映射，导致下载补丁出现问题，需要注意
+3. 下载问题，本地路径映射，导致下载补丁出现问题，需要注意
+4. tomcat虚拟路径映射 补丁文件存储路径file_storage_path=/Users/xiongxingxing/javaLearning/.tinker-manager  下载补丁文件静态服务器地址 patch-static-url=http://127.0.0.1/patch(命令行运行方式) (还须知道springBoot终端运行时如何配置虚拟路径)  war包下运行配置为`<Context path="/patch" docBase="/Users/xiongxingxing/javaLearning/.tinker-manager"/>`  file_storage_path=/Users/xiongxingxing/javaLearning/.tinker-manager patch-static-url=http://127.0.0.1:8080/patch
+
+
+
+
